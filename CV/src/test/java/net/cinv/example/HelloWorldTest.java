@@ -27,7 +27,7 @@ import org.apache.struts2.StrutsTestCase;
 public class HelloWorldTest extends StrutsTestCase {
 
     public void testHelloWorld() throws Exception {
-        HelloWorld hello_world = new HelloWorld();
+    	HelloWorld hello_world = container.inject(HelloWorld.class); //Bug fix (http://struts.1045723.n5.nabble.com/Blank-app-fails-to-build-td5720400.html)
         String result = hello_world.execute();
         assertTrue("Expected a success result!",
                 ActionSupport.SUCCESS.equals(result));
