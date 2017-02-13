@@ -20,6 +20,10 @@
             </result>
             -->
         </action>
+        
+        <action name="SearchCV" class="net.cinv.Search">
+            <result name="success">SearchCV.jsp</result>
+        </action>
 
     </package>
 
