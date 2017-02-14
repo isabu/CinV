@@ -13,7 +13,7 @@
         <default-action-ref name="index"/>
 
         <action name="index">
-        	<result>index.html</result>
+        	<result>index.jsp</result>
             <!--<result type="redirectAction">
                 <param name="actionName">HelloWorld</param>
                 <param name="namespace">/example</param>
@@ -21,7 +21,7 @@
             -->
         </action>
         
-        <action name="SearchCV" class="net.cinv.Search">
+        <action name="SearchCV" class="net.cinv.CV.Search">
             <result name="success">SearchCV.jsp</result>
         </action>
 
