@@ -1,5 +1,8 @@
 package net.cinv.CV;
 
+import net.cinv.Data.UIBConnection;
+
+import com.franz.agraph.repository.AGRepositoryConnection;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class Search extends ActionSupport {
@@ -10,11 +13,14 @@ public class Search extends ActionSupport {
 	public String execute() throws Exception {
 
         //if (isInvalid(getKeyword())) return INPUT;
-        if (keywords.isEmpty())
+        if (keywords.isEmpty()) {
         	resultado = "";
-        else
-        	resultado = "Resultados de la búsqueda...";
-        
+        } else {
+        	//AGRepositoryConnection con = UIBConnection.connect(true);
+        	//resultado = "Resultados de la búsqueda...";
+        	resultado = UIBConnection.testcon();
+        }
+        	
         return SUCCESS;
     }
 	
