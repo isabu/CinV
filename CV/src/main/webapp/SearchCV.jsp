@@ -10,7 +10,7 @@
 </head>
 <body>
 <s:form action="SearchCV">
-    <s:textfield name="keywords" key="Name"/>
+    <s:textfield name="keywords" label="Name"/>
     <s:submit/>
 </s:form>
 <s:set var="resultado" value="resultado" />
