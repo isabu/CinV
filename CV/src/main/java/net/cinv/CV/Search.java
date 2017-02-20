@@ -18,7 +18,11 @@ public class Search extends ActionSupport {
         } else {
         	//AGRepositoryConnection con = UIBConnection.connect(true);
         	//resultado = "Resultados de la búsqueda...";
-        	resultado = UIBConnection.testcon();
+        	try {
+        		resultado = UIBConnection.testcon();
+        	} catch (Exception e) {
+            	resultado = e.getMessage();
+			}
         }
         	
         return SUCCESS;
